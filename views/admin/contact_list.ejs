@@ -1,0 +1,41 @@
+<%-  include("navbar.ejs") %> 
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Contact List</h3>
+        </div>
+        <div class="col-md-12">
+            <table class="table table-sm teble-bordered">
+                <tr>
+                    <th></th>
+                    <th>SN</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Subject</th>
+                    <th>Message</th>
+                </tr>
+                <% for(var i=0;i<contact_list.length;i++){%>
+                    <tr>
+                        <td></td>
+                        <td><%=i+1%></td>
+                        <td><%=contact_list[i].student_name%></td>
+                        <td><%=contact_list[i].student_email%></td>
+                        <td><%=contact_list[i].student_subject%></td>
+                        <td><%=contact_list[i].student_message%></td>
+                    </tr>
+
+              <%  }%>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<%-  include("footer.ejs") %>

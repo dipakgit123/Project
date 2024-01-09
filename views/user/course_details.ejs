@@ -1,0 +1,82 @@
+<%- include('navbar.ejs') %>
+<br><br>
+
+
+<div class="container">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-12">
+            <br><br>
+        </div>
+        <div class="col-md-5">
+            <img src="/upload/<%=course_det[0].course_image%>" width="100%">
+        </div>
+        <div class="col-md-5">
+        <h3 style="font-weight: bold;"><%=course_det[0]['course_name']%></h3>
+        <h5>In Just<%=course_det[0]['course_duration']%></h5><br>
+        <h2 style="font-weight: bold;"> &#8377;<%=course_det[0]['course_price']%></h3><br>
+            <h4>By <%=course_det[0]['course_mentor']%></h5>
+                <br>
+                <h5><%=course_det[0]['course_platform']%></h5>
+                <br>
+                <% if(is_purchase){ 
+                  %>
+                  <button class="btn btn-dark btn-lg">Allready Purchase</button>
+                  <%
+                }
+                else
+                {
+                  %>
+                <a href="/confirm_seat/<%=course_det[0]['course_id'] %>">
+                <button class="btn btn-dark btn-lg">Confirm Your Seat</button>
+              </a>
+              <%
+            } %>
+                <% if(course_det[0].course_sample_video!="") {%>
+                <button style="background-color: blue; color: white; font-size: 30px;width: 60px;height: 60px; border-radius: 50%;
+                position: absolute;
+                right:20px ;
+                top:40px;
+                " data-toggle="modal" data-target="#videoModal"> <i class="fa fa-play"></i></button>
+                <% } %>
+        </div>
+        <div class="col-md-12 mt-5">
+            <br><br>
+            <h6><%-course_det[0].course_details.replaceAll('\n',"<br>")%></h5>
+        </div>
+    </div>
+</div>
+
+
+<!-- Button to Open the Modal -->
+  <!-- The Modal -->
+  <div class="modal" id="videoModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Demo video</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <video width="100%" controls>
+            <source src="/upload/<%=course_det[0].course_sample_video%>">
+          </video>
+        </div>
+  
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+<%- include('footer.ejs') %>

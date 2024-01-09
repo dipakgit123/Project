@@ -1,0 +1,78 @@
+<%-  include("navbar.ejs") %> 
+
+<div class="container-fluid p-5 bg-white">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="alert alert-primary"><b><%=c_det[0].course_name%></b></h3>
+        </div>
+        <div class="col-md-12">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 border-bottom">
+                        Course name
+                        <b class="d-block ps-3"><%=c_det[0].course_name%></b>
+                    </div>
+                    <div class="col-md-12 border-bottom mb-1 p-1 p-1">
+                        Category
+                        <b class="d-block ps-3"><%=c_det[0].category_name%></b>
+                    </div>
+                    <div class="col-md-12 border-bottom mb-1 p-1">
+                        Duration
+                        <b class="d-block ps-3"><%=c_det[0].course_duration%></b>
+                    </div>
+                    <div class="col-md-12 border-bottom mb-1 p-1">
+                        Price
+                        <b class="d-block ps-3">
+                            <%=c_det[0].course_price%></b>
+                    </div>
+                    <div class="col-md-12 border-bottom mb-1 p-1">
+                        Mentor
+                        <b class="d-block ps-3"><%=c_det[0].course_mentor%></b>
+                    </div>
+                    <div class="col-md-12 border-bottom mb-1 p-1">
+                        Link
+                        <b class="d-block ps-3"><%=(c_det[0].course_link) ? c_det[0].course_link:'...'%></b>
+                    </div>
+                    <div class="col-md-12 border-bottom mb-1 p-1">
+                        Platform
+                        <b class="d-block ps-3"><%=c_det[0].course_platform%></b>
+                    </div>
+                    <div class="col-md-12 border-bottom mb-1 p-1">
+                        Image
+                   <a href="/upload/<%=c_det[0].course_image%>">
+                    <b class="d-block ps-3">View</b>
+                </a>
+                    </div>
+                    <% if(c_det[0].course_sample_video!=""){ %>
+                        
+                        <div class="col-md-12 border-bottom mb-1 p-1">
+                            Video
+                       <a href="/upload/<%=c_det[0].course_sample_video%>">
+                        <b class="d-block ps-3">open</b>
+                    </a>
+                        </div>
+                   <% }%>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mb-2">
+            Details
+            <b class="d-block ps-3"><%- c_det[0].course_details.replaceAll("\n","<br>")%></b>
+        </div>
+    </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+<%-  include("footer.ejs") %>

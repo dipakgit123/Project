@@ -1,0 +1,53 @@
+<%-  include("navbar.ejs") %> 
+
+<div class="container-fluid p-5 bg-white ">
+    <div class="row">
+        <div class="col-md-12 text">
+            <h3>Courses List</h3>
+        </div>
+        <div class="col-md-12 table-responsive">
+            <table class="table table-bordered table-sm">
+                <tr>
+                    <th></th>
+                    <th>Course name</th>
+                    <th>Category</th>
+                    <th>Duration</th>
+                    <th>Mentor</th>
+                    <th>Platform</th>
+                    <th>Price</th>
+                </tr>
+                <% for(var i=0;i<course_list.length;i++){ %>
+                    <tr>
+                        <td width="1%" style="white-space: nowrap;">
+                            <a href="/admin/course_details/<%=course_list[i].course_id%>">
+                            <button class="btn btn-success btn-sm"><i class="fa fa-print"></i>Details</button>
+                            </a>
+                            <a href="/admin/delete_course/<%=course_list[i].course_id%>" ><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
+                        </td>
+                        <td><%=i+1%></td>
+                        <td><%=course_list[i].course_name%></td>
+                        <td><%=course_list[i].category_name%></td>
+                        <td><%=course_list[i].course_duration%></td>
+                        <td><%=course_list[i].course_mentor%></td>
+                        <td><%=course_list[i].course_platform%></td>
+                        <td><big><b>&#8377; <%=course_list[i].course_price%></b></big></td>
+
+                    </tr>
+
+              <%  } %>
+            </table>
+        </div>
+        </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+<%-  include("footer.ejs") %>

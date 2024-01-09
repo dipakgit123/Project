@@ -1,0 +1,42 @@
+<%- include('navbar.ejs') %>
+<div style="background-color: #3AAFA9;">
+<br><br>
+<style>
+</style>
+<div class="container" >
+    
+    <div class="row justify-content-center">
+        <div class="col-md-12 mb-5">
+        <h3 class="text-center">New Added Course</h3>
+    </div>
+    <% for (var i=0;i<courses.length;i++) {%>
+        <div class="col-md-4">
+            <div class="mb-5">
+            <div class="card" style="border: none;"  >
+                <div class="card-header">
+                   <h2> <%=courses[i].course_name%> </h2>
+                </div>
+                <div class="card-body"   >
+                    <img src="/upload/<%=courses[i].course_image%>" width="100%" >
+                </div>
+                <div class="card-footer bg-dark text-white  ">
+                    <h3>&#8377; <%=courses[i].course_price%> /-</h3>
+                    <a href="/course_details/<%=courses[i].course_id%>">
+                        <button class="btn btn-sm btn-light float-right">View Details</button>
+                    </a>
+                </h3>
+                </div>
+            </div>
+        </div>
+</div>
+  <%  } %>
+
+</div>
+
+
+
+<br><br><br><br>
+<br><br><br><br>
+</div>
+
+<%- include('footer.ejs') %>

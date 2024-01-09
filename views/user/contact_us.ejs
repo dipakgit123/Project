@@ -1,0 +1,81 @@
+
+
+<%- include('navbar.ejs') %>
+
+<h2 style="text-align: center;" class="mt-4">Contact</h2>
+<div class="container mt-4">
+    <div class="row">
+            <div class="col-md-6 " style="background-color:wheat">
+                <h3 style="text-align:center">Address</h3>
+       <div style="text-align: center; font-size: 30px;">  <i class="fa-solid fa-location-dot"></i></div>
+       <h6>Dr. Vithalrao Vikhe Patil College of Engineering, Post MIDC, Vadgaon Gupta (Vilad Ghat), Ahmednagar – 414111.
+       </h6>
+            </div>
+            <div class="col-md-6"  style="background-color:wheat">
+            <h3 style="text-align:center">Email</h3>
+            <div style="text-align: center; font-size: 30px;"> <i class="fa-solid fa-envelope"></i> </div>
+            <h6 style="text-align:center">punddipak9@gmail.com</h6>
+            <p style="text-align:center">9022585989</p>
+        </div>
+    </div>
+    </div>
+</div>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36714.96144068018!2d74.66253837523084!3d19.181260000000023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bdcbbe061fe9e81%3A0x1972733fbb666d7e!2sDr.Vithalrao%20Vikhe%20Patil%20College%20Of%20Engineering%2C%20Ahmednagar%2C!5e0!3m2!1sen!2sin!4v1690169552160!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+        </div>
+        <div class="col-md-6 " >
+            <form action="/save_student" method="post">
+                <h3>Get Information</h3>
+                <input type="text" name="student_name" class="form-control" placeholder="name"><br>
+                <input type="text" name="student_email" class="form-control" placeholder="email"><br>
+                <input type="text" name="student_subject" class="form-control" placeholder="subject"><br>
+                <textarea type="text" name="student_message" class="form-control" placeholder="message"></textarea>
+                <br>
+                <div style="text-align:center">
+                <button class="btn btn-md btn-primary" >Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+<br><br><br><br>
+<br><br><br><br>
+
+
+
+
+
+<%- include('footer.ejs') %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

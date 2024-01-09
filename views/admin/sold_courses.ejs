@@ -1,0 +1,41 @@
+<%-  include("navbar.ejs") %> 
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>All Sold Course</h3>
+        </div>
+        <div class="col-md-12">
+            <table class="table table-sm teble-bordered">
+                <tr>
+                    <th></th>
+                    <th>SN</th>
+                    <th>User</th>
+                    <th>Courses</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                </tr>
+                <% for(var i=0;i<sold_list.length;i++){%>
+                    <tr>
+                        <td></td>
+                        <td><%=i+1%></td>
+                        <td><%=sold_list[i].user_name%></td>
+                        <td><%=sold_list[i].course_name%></td>
+                        <td><%=sold_list[i].purchase_date%></td>
+                        <td>&#8377;<%=sold_list[i].amount%></td>
+                    </tr>
+
+              <%  }%>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<%-  include("footer.ejs") %>

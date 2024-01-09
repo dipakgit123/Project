@@ -1,0 +1,36 @@
+<%- include('navbar.ejs') %>
+
+
+<div style="background-color:rgb(42, 151, 171);">
+<div style="margin-left: 550px;">
+<form action="/do_login" method="post" >
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-5  border p-3 " style="margin-top: 80px;margin-bottom: 100px;">
+                <h3 >User Login</h3>
+                <br>
+                <b>Mobile</b>
+                <input type="number" name="user_mobile" class="form-control">
+                <br>
+                <b>Password</b>
+                <input type="password" name="user_password" class="form-control">
+                <br>
+                <div class="text-right">
+                    <button class="btn btn-danger">Login Now</button>
+                </div>
+                <h6>New user?<a href="/register" style="color:black">Create Account</a></h6>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<%- include('footer.ejs') %>
